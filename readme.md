@@ -1,0 +1,1 @@
+https://www.figma.com/file/9mV6rCFOEd1ptuZ4JBovVS/Collab-landing-page-design-(Community)?type=design&node-id=1-971&mode=design&t=tiaykgtkHxhwnII6-0

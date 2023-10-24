@@ -9,9 +9,29 @@ body * {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
   
-  /* .main-header {
+  body {
     display: inline-block;
-    width: 1000px;
-    margin-top: 20px;
-    margin-left: calc(50% - 500px);
-  } */
+    width: 100%;
+    /* margin-top: 20px; */
+    /* margin-left: calc(100% - 95%)/2; */
+  }
+
+header>div{
+    background-color: rgb(110, 40, 176);
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+
+nav{
+    border-bottom:  2px solid rgb(110, 40, 176);
+    padding:10px;
+    float:right;
+}
+
+nav:last
+
+/* .top-header-text{
+    
+} */
