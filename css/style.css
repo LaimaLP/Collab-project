@@ -9,29 +9,119 @@ body * {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
   
-  body {
-    display: inline-block;
-    width: 100%;
-    /* margin-top: 20px; */
-    /* margin-left: calc(100% - 95%)/2; */
+
+
+  header{
+  width: 100%;
+  display: inline-block;
+  margin-top: 20px;
+    
   }
+
+
 
 header>div{
     background-color: rgb(110, 40, 176);
     text-align: center;
     color: white;
-    padding: 10px;
+    padding: 15px;
 }
 
 
 nav{
     border-bottom:  2px solid rgb(110, 40, 176);
     padding:10px;
-    float:right;
+    display: inline-block;
+    width: 100%;
+    /* float:right; */
 }
 
-nav:last
+.top-header-text> .logo a{
+  color: #9a54bc;
+  text-decoration: none;
+  
+  font-size: 50px;
+  text-decoration: none;
+  float: left;
+}
 
-/* .top-header-text{
-    
+
+
+nav>a{
+  float: right;
+  font-size: 25px;
+  text-decoration: none;
+  float: right;
+  margin-right: 30px;
+  color: black;
+  margin-top: 15px;
+ 
+
+  
+  }
+
+
+  .request-demo{
+    border: 2px solid #9a54bc;
+    color: #9a54bc;
+    padding: 10px;
+    margin-top: 3px;
+    border-radius: 5px;
+   
+  }
+  .request-demo:hover{
+    background-color: #9a54bc;
+    color: white;
+  }
+  main{
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+.main-text{
+ 
+  color: #2B0236;
+  font-size: 50px;
+  margin: 20px;
+}
+
+
+.hero-request-button{
+border: 2px solid #9a54bc;
+background-color: #9A54BC ;
+color: white;
+padding: 15px;
+margin-top: 3px;
+border-radius: 5px;
+font-size: 25px;
+
+}
+.hero-images-section{
+  margin-top: 30px;
+  background-color: burlywood;
+  position: relative;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+
+.hero-images-section>img:nth-child(2){
+  background-color: #9A54BC;
+  position: absolute;
+  right: 35%;
+  
+}.hero-images-section>img:nth-child(1){
+  background-color: #9A54BC;
+  position: absolute;
+  right: 42%;
+  
+}
+/* .hero-images-section>img:nth-child(2){
+  position: absolute;
+  
+
+
+
 } */
+
+
