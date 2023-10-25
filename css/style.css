@@ -159,10 +159,15 @@ font-weight: 700;
   box-shadow: 1px 1px 10px;
 
 }
+.brands-section h1{
+font-size: 25px;
 
+
+}
 .brands-list{
+  margin-top: 50px;
   display: flex;
-  justify-content:center
+  justify-content: space-evenly;
 }
 
 
