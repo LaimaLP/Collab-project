@@ -3,9 +3,12 @@ body * {
     padding: 0;
     vertical-align: top;
     box-sizing: border-box;
+   
   }
   
   body {
+    max-width: 1500px;
+    margin: auto;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
   
@@ -15,7 +18,7 @@ body * {
   margin-top: 20px;
       }
 
-.top-header-text> p, p>a{
+.top-header-text> p, .top-header-text>p a{
     background-color: rgba(96, 38, 127, 1);
     text-align: center;
     color: white;
@@ -47,6 +50,8 @@ nav {
 .menu-link{
   display: flex;
   gap: 20px;
+  align-items: center;
+  /* justify-content: center; */
   
   }
 
@@ -55,12 +60,25 @@ nav {
   font-size: 20px;
   text-decoration: none;
    color: black;
+   border-radius: 5px;
+   /* padding: 5px; */
       }
 
+
+      .menu-link a:last-child{
+        color: #9A54BC;
+        border: 2px solid #9A54BC;
+        padding: 5px;
+      }    
   .menu-link a:hover{
     color: #9A54BC;
   }
-
+  .menu-link a:last-child:hover{
+    color: white;
+    border: 2px solid #9A54BC;
+    padding: 5px;
+    background-color: #9A54BC;
+  }  
 
   main{
     width: 100%;
@@ -159,6 +177,8 @@ font-weight: 700;
   box-shadow: 1px 1px 10px;
 
 }
+
+
 .brands-section h1{
 font-size: 25px;
 
@@ -170,5 +190,140 @@ font-size: 25px;
   justify-content: space-evenly;
 }
 
+.collab-app-help{
+margin-top: 80px;
+
+}
+.collab-app-help h2{
+  font-size: 35px;
+  line-height: 25px;
+}
+.app-content{
+/* background-color: aqua; */
+margin-right: 10%;
+margin-left: 10%;
+display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.info-side{
+  width: 60%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  
+ 
+}
+.buttons-container{
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  /* background-color: antiquewhite; */
+  padding: 5px 0;
+  box-shadow: 0px 3px 10px rgb(153, 146, 146);
+  border-radius: 5px;
+  width: 81%;
+  margin-left: 50px;
+   
+ 
+}
+.info-side button{
+padding:15px 30px;
+background-color: rgb(96, 38, 127);
+color:white;
+border-radius: 5px;
+border: 2px solid rgb(154, 84, 188);
+}
 
 
+.buttons-container :first-child{
+
+  width: 49%;
+ 
+}
+.buttons-container :last-child{
+    width: 49%;
+
+}
+
+.list-container{
+  /* background-color: #9A54BC; */
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+gap:5px;
+  align-items: center;
+  /* justify-content: center;  */
+}
+
+
+.list-item{
+  width: 70%;
+  background-color: rgb(242, 242, 242);
+  margin-bottom: 10px;
+  padding: 40px 20px;
+text-align: left;
+  display: inline-block;
+font-size: 16px;
+}
+.list-item a{
+  
+  color: black;
+  
+font-size: 15px;
+
+}
+.img-container{
+  /* width: 300px; */
+  /* background-color: brown; */
+  /* aspect-ratio: 200/432; */
+  width: 40%;
+}
+.img-container>img{
+  width: 350px;
+ 
+  }
+
+.video-section{
+margin-top: 80px;
+margin-bottom: 80px;
+/* background-color: antiquewhite; */
+
+
+}
+.video-section h2{
+  margin-bottom: 30px;
+}
+.video-section p{
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+
+.photos-gallery{
+}
+.photos-gallery h2{
+  margin-bottom: 30px;
+}
+.photos-gallery .photo-container{
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap:40px;
+}
+.photos-gallery .photo-item{
+  
+}
+.photos-gallery .text-container{
+  text-align: left;
+  margin-left: 10px;
+  color: #9A54BC;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.text-container p:last-child{
+  color: black;
+  margin-top: 10px;
+
+
+}
