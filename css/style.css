@@ -398,10 +398,36 @@ background-color: rgba(43, 2, 54, 1);
 }
 ::marker{
 
-  content:url(../img/Vector.svg);
+  content:url(../img/list.svg);
   padding: 20px;
 }
 .custom-marker > li{
   padding-left: 10px;
   margin-bottom: 10px;
+}
+
+
+.star-section> .stars{
+  margin: 100px 0;
+}
+.review-conteiner{
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  align-items: center;
+  gap: 50px;
+}
+
+.review-conteiner>p{
+  font-size: 15px;
+  width: 50%;
+}
+.review-conteiner>i{
+  font-size: 40px;
+ 
+}
+
+.avatar{
+  margin: 50px 0 10px;
+  height: 80px;
 }
