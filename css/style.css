@@ -308,13 +308,9 @@ main {
   flex-direction: row;
   justify-content: center;
   gap: 40px;
-  /* overflow: hidden;
-background-color: #9A54BC;
-padding-bottom: 20px; */
+
 }
-/* .photos-gallery .photo-item{
-height: 200px;
-} */
+
 .photo-item > img {
   height: 200px;
   margin-bottom: 15px;
@@ -497,7 +493,7 @@ h2 {
   max-width: 900px;
   min-width: 900px;
   /* position: relative; */
-  /* background-color: aqua; */
+
 }
 avatar-on-map-conteiner {
   max-width: 1000px;
@@ -636,7 +632,7 @@ avatar-on-map-conteiner {
 }
 .table-div{
   
-  /* background-color: antiquewhite; */
+
   margin-right: 200px;
   text-align: left;
 
@@ -644,14 +640,13 @@ avatar-on-map-conteiner {
 table{
   font-size: 20px;
   padding: 0;
-  /* border: 2px solid black; */
+
 }
 td{
   color: rgb(96, 38, 127);
   padding-bottom: 30px;
-  /* padding: 15px; */
+  cursor: pointer;
 
-  /* border: 2px solid black; */
 }
 th{
   /* text-align: left; */
