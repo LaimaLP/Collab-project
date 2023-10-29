@@ -336,7 +336,7 @@ height: 200px;
 }
 .packages-section {
   margin-top: 100px;
-  background-color: #f8f5fa8e;
+  background-color: rgba(226, 189, 242, 0.11);
   padding: 50px 0;
 }
 
@@ -414,7 +414,7 @@ height: 200px;
   margin-bottom: 10px;
 }
 .star-section {
-  background-color: #f8f5fa8e;
+  background-color: rgba(226, 189, 242, 0.11);
   padding-bottom: 50px;
 }
 .star-section > .stars {
@@ -565,9 +565,10 @@ avatar-on-map-conteiner {
 .contacts-map-section{
   display: flex;
   align-items: center;
+  background-color: rgba(226, 189, 242, 0.11);
 }
 .question-contact-conteiner{
-  width: 45%;
+  width: 35%;
   text-align: center;
 }
 .question-contact-conteiner>p{
@@ -575,6 +576,90 @@ avatar-on-map-conteiner {
   margin-top: 15px;
 }
 .map-div{
- 
+ margin-left: 100px;
  width: 45%;
 }
+.ending-section{
+  margin-top: 100px;
+/* background-color: aqua; */
+}
+.ending-section>h2{
+  color: rgba(154, 84, 188, 1);
+  text-align: left;
+  font-size: 45px;
+  margin-left: 100px;
+}
+.ending-section p{
+  font-size: 18px;
+}
+.contacts-table-conteiner{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(226, 189, 242, 0.11);
+  padding-bottom: 50px;
+  
+
+}
+.social-contacts-div{
+  /* background-color: aquamarine; */
+  width: 30%;
+  margin-left: 100px;
+  text-align: left;
+}
+.social-contacts-div h4{
+  margin: 30px 0;
+  font-size: 25px;
+  
+}
+.solcial-icons-container{
+  display: flex;
+  gap: 18px;
+}
+.solcial-icons-container img{
+  width: 12%;
+  cursor: pointer;
+}
+.table-div{
+  
+  /* background-color: antiquewhite; */
+  margin-right: 200px;
+  text-align: left;
+
+}
+table{
+  font-size: 20px;
+  padding: 0;
+  /* border: 2px solid black; */
+}
+td{
+  color: rgb(96, 38, 127);
+  padding-bottom: 30px;
+  /* padding: 15px; */
+
+  /* border: 2px solid black; */
+}
+th{
+  /* text-align: left; */
+  padding: 0 100px 30px 0;
+}
+.table-div p{
+  font-weight: 600;
+
+}
+.table-div span{
+  color: rgb(96, 38, 127);
+  margin-left: 20px;
+}
+
+
+
+
+
+
+footer{
+  background-color: rgba(96, 38, 127, 1);
+  color: white;
+  font-size: 15px;
+  padding: 10px 0;
+}
+
