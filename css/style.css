@@ -354,6 +354,35 @@ height: 200px;
   margin-bottom: 50px;
   font-size: 20px;
 }
+.toggle-button{
+  background-color: rgba(86, 230, 165, 1);
+  width: 70px;
+  height: 30px;
+  border-radius: 200px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+}
+.toggle-button::before{
+position: absolute;
+content: ""; 
+background-color: white;
+width: 20px;
+height: 20px;
+border-radius: 200px;
+margin: 5px;
+transition: 0.2s;
+}
+input:checked + .toggle-button{
+  background-color: grey
+}
+input:checked + .toggle-button::before{
+  transform: translateX(-30px);
+  
+}
+input{
+  display:none;
+}
 .button-container > p:first-child {
   color: rgba(167, 157, 157, 1);
 }
