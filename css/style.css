@@ -561,3 +561,20 @@ avatar-on-map-conteiner {
   background-color: white;
   color: #9a54bc;
 }
+
+.contacts-map-section{
+  display: flex;
+  align-items: center;
+}
+.question-contact-conteiner{
+  width: 45%;
+  text-align: center;
+}
+.question-contact-conteiner>p{
+  font-weight: 600;
+  margin-top: 15px;
+}
+.map-div{
+ 
+ width: 45%;
+}
