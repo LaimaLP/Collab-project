@@ -418,7 +418,7 @@ height: 200px;
   padding-bottom: 50px;
 }
 .star-section > .stars {
-  margin: 100px 0;
+padding: 70px 0;
 }
 .review-conteiner {
   display: flex;
