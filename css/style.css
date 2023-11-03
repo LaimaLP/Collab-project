@@ -682,9 +682,10 @@ th{
   font-weight: 600;
 
 }
-.table-div span{
+.table-div a{
   color: rgb(96, 38, 127);
-  margin-left: 20px;
+  margin-left: 40px;
+  text-decoration: none;
 }
 
 
