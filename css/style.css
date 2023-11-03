@@ -607,10 +607,20 @@ height: 85px;
 .question-contact-conteiner{
   width: 35%;
   text-align: center;
+  
 }
-.question-contact-conteiner>p{
+.question-contact-conteiner>h2{
+  margin-bottom: 20px;
+}
+.question-contact-conteiner>a{
   font-weight: 600;
-  margin-top: 15px;
+  
+  text-decoration: none;
+  color: #2b0236;
+
+}
+.question-contact-conteiner p{
+  margin-top: 20px;
 }
 .map-div{
  margin-left: 100px;
@@ -682,14 +692,11 @@ th{
   font-weight: 600;
 
 }
-.table-div span{
+.table-div a{
   color: rgb(96, 38, 127);
-  margin-left: 20px;
+  margin-left: 40px;
+  text-decoration: none;
 }
-
-
-
-
 
 
 footer{
