@@ -2,7 +2,7 @@ console.log("labas");
 
 const comments = [
     {
-      stars: 3,
+      stars: 4,
       comment: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, nisl eget tristique
             molestie. Quisque pharetra tincidunt interdum nunc, ac eget nisi, lectus interdum. Cras aliquet
             curabitur in morbi facilisi imperdiet non sollicitudin.`,
@@ -13,7 +13,6 @@ const comments = [
       stars: 4,
       comment: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, nisl eget tristique
             molestie. Quisque pharetra tincidunt interdum nunc, ac eget nisi, lectus interdum. Cras aliquet
-            curabitur in morbi facilisi imperdiet non sollicitudin. Molestie volutpat vulputate eu nunc in
             vulputate sit. Varius neque accumsan libero, augue tortor.`,
       img: 17,
       name: "Production",
@@ -22,8 +21,6 @@ const comments = [
       stars: 5,
       comment: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, nisl eget tristique
             molestie. Quisque pharetra tincidunt interdum nunc, ac eget nisi, lectus interdum. Cras aliquet
-            curabitur in morbi facilisi imperdiet non sollicitudin. Molestie volutpat vulputate eu nunc in
-            vulputate sit. Varius neque accumsan libero, augue tortor. Id metus rutrum fringilla nibh neque, at
             bibendum. Diam libero morbi aliquet mi gravida velit enim.`,
       img: 16,
       name: "Result",
@@ -37,6 +34,9 @@ const comments = [
   const commentImage = document.querySelector(".commentImage");
   const commentName = document.querySelector(".commentName");
   
+  updateComment();
+
+
   function updateComment() {
     const fullStars = comments[0]["stars"];
     const emptyStars = 5 - fullStars;
@@ -48,7 +48,6 @@ const comments = [
       ${fullStarsHtml}
       ${emptyStarsHtml}
     `;
-  
     commentContent.textContent = comments[0]["comment"];
     commentImage.src = `./img/avatarai/Ellipse ${comments[0]["img"]}.svg`;
     commentName.textContent = comments[0]["name"];
@@ -72,7 +71,6 @@ const comments = [
   rightArr.addEventListener("click", shiftCommentsRight);
   leftArr.addEventListener("click", shiftCommentsLeft);
   
-  updateComment();
 
 
 
@@ -92,79 +90,50 @@ checkBtn.addEventListener('click', function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
 // How does Collab-app help section
 
-//   const vendorBtn = document.querySelector(".b1");
-//   const supervisorBtn = document.querySelector(".b2");
 
-//   const vendorApp = [
-//     {
-//       bold: "Work/Material request:",
-//       text: "Whenever a client wants to start a work, request notifications with date and time for materials and artisians will be promted through their app",
-//     },
-//     {
-//       bold: "Project Management:",
-//       text: "Work on multiple projects",
-//     },
-//     {
-//       bold: "Payment:",
-//       text: "Get paid for the step by step work",
-//     },
-//     {
-//       bold: "Tutorials:",
-//       text: "Explore the video tutorials to learn",
-//     },
-//   ];
-//   const supervisorApp = [
-//     {
-//       bold: "Project Management:",
-//       text: "Work on multiple projects",
-//     },
-//     {
-//       bold: "Payment:",
-//       text: "Get paid for the step by step work",
-//     },
-//     {
-//       bold: "Tutorials:",
-//       text: "Explore the video tutorials to learn",
-//     },
-//   ];
+const firstComment = document.getElementById('first');
+const secondComment = document.getElementById('second');
+const thirdComment = document.getElementById('third');
+const fourthComment = document.getElementById('fourth');
 
-//   const helpUl = document.querySelector(".help-list");
+const helpBtn = document.getElementById('helpBtn');
+const helpBtn2 = document.getElementById('helpBtn2');
 
-//   function helpHtml(arr) {
-//     let list = "";
-//     arr.forEach((el) => {
-//       list += `
-//       <li><b>${el["bold"]}</b> ${el["text"]}<a class="see-more" href="#"> ...see more</a></li>
-//       `;
-//     });
-//     return  helpUl.innerHTML = list;
-//   }
 
-//   helpHtml(vendorApp);
+helpBtn.addEventListener('click', function(){
+   
+        firstComment.innerHTML=`<b>Work/Material request:</b> Whenever a client wants to
+        start, a work request notifications with date
+        and time for materials and artisians will be promted through their app.</p>`;
+        secondComment.innerHTML=` <b>Project Management:</b> Work on multiple projects <a
+        href="#"><b>...see
+            more </b></a>`;
+        thirdComment.innerHTML=`<b>Payment:</b> Get paid for the work step by step <a
+        href="#"><b>...see
+            more </b></a>`;
+        fourthComment.innerHTML=`<b>Tutorials:</b> Explore the video tutorials to learn more <a
+        href="#"><b>...see
+            more </b></a>`;
 
-//   vendorBtn.addEventListener("click", function () {
-//     if (vendorBtn.classList.contains("inactive")) {
-//       vendorBtn.classList.remove("inactive");
-//       supervisorBtn.classList.add("inactive");
-//       helpHtml(vendorApp);
-//     }
-//   });
-//   supervisorBtn.addEventListener("click", function () {
-//     if (supervisorBtn.classList.contains("inactive")) {
-//       supervisorBtn.classList.remove("inactive");
-//       vendorBtn.classList.add("inactive");
-//       helpHtml(supervisorApp);
-//     }
-//   });
+})
+
+helpBtn2.addEventListener('click', function(){
+   
+    fourthComment.innerHTML=`<b>Work/Material request:</b> Whenever a client wants to
+    start, a work request notifications with date
+    and time for materials and artisians will be promted through their app.</p>`;
+    thirdComment.innerHTML=` <b>Project Management:</b> Work on multiple projects <a
+    href="#"><b>...see
+        more </b></a>`;
+    firstComment.innerHTML=`<b>Payment:</b> Get paid for the work step by step <a
+    href="#"><b>...see
+        more </b></a>`;
+    secondComment.innerHTML=`<b>Tutorials:</b> Explore the video tutorials to learn more <a
+    href="#"><b>...see
+        more </b></a>`;
+
+})
+
+
