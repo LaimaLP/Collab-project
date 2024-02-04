@@ -332,7 +332,7 @@ main {
 }
 .packages-section {
   margin-top: 100px;
-  background-color: rgba(226, 189, 242, 0.11);
+  background-color: rgba(226, 189, 242, 0.232);
   padding: 50px 0;
 }
 
@@ -439,21 +439,23 @@ input{
 }
 
 
-.comments {
-  margin: 5rem 0;
+/* .comments {
   text-align: center;
+  background-color: rgba(226, 189, 242, 0.232);
+  padding: 50px 0;
 }
 
 .comment{
-  width: 800px;
-  height: 70px;
+  width: 600px;
+  height: 80px;
 }
 .comment-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  margin: 2rem 0;
+  gap: 4rem;
+  height: 200px;
+
 }
 
 .leftArrow, .rightArrow {
@@ -463,11 +465,42 @@ input{
 .comments p {
   font-size: 0.9rem;
   margin-top: 0.5rem;
+} */
+
+
+
+.comments {
+  text-align: center;
+  background-color: rgba(226, 189, 242, 0.232);
+  padding: 50px 0;
+  overflow: hidden; /* Hide overflowing content for smooth transition */
+}
+
+.comment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  height: 200px;
+  transition: transform 0.5s ease; /* Add smooth transition for the transform property */
+}
+
+.comment {
+  width: 600px;
+  height: 80px;
 }
 
 
 
 
+.leftArrow, .rightArrow {
+  cursor: pointer;
+}
+
+.comments p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
 
 
 

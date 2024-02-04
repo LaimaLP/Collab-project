@@ -1,166 +1,106 @@
 console.log("labas");
 
-let comments = [
-  {
-    stars: 3,
-    comment: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, nisl eget tristique
-          molestie. Quisque pharetra tincidunt interdum nunc, ac eget nisi, lectus interdum. Cras aliquet
-          curabitur in morbi facilisi imperdiet non sollicitudin.`,
-    img: 18,
-    name: "Designation",
-  },
-  {
-    stars: 4,
-    comment: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, nisl eget tristique
-          molestie. Quisque pharetra tincidunt interdum nunc, ac eget nisi, lectus interdum. Cras aliquet
-          curabitur in morbi facilisi imperdiet non sollicitudin. Molestie volutpat vulputate eu nunc in
-          vulputate sit. Varius neque accumsan libero, augue tortor.`,
-    img: 17,
-    name: "Production",
-  },
-  {
-    stars: 5,
-    comment: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, nisl eget tristique
-          molestie. Quisque pharetra tincidunt interdum nunc, ac eget nisi, lectus interdum. Cras aliquet
-          curabitur in morbi facilisi imperdiet non sollicitudin. Molestie volutpat vulputate eu nunc in
-          vulputate sit. Varius neque accumsan libero, augue tortor. Id metus rutrum fringilla nibh neque, at
-          bibendum. Diam libero morbi aliquet mi gravida velit enim.`,
-    img: 16,
-    name: "Result",
-  },
-];
-
-const commentsSection = document.querySelector(".comments");
-
-function commentHtml() {
-  const fullStars = comments[0]["stars"];
-  const emptyStars = 5 - fullStars;
-
-  const fullStarsHtml = "<img src='./img/Star.svg'>".repeat(fullStars);
-  const emptyStarsHtml = "<img src='./img/starEmpty.png'>".repeat(emptyStars);
-
-  const starHTML = `
-          <div class='commentContainer'>
-              <div class="stars">
-              ${fullStarsHtml}
-              ${emptyStarsHtml}
-              </div>
-              <div class="comment-container">
-              <img class="leftArrow" src="./img/left.png" alt="">
-              <div class="comment">
-              ${comments[0]["comment"]}
-              </div>
-              <img class="rightArrow" src="./img/right.png" alt="">
-              </div>
-              <img src="./img/avatarai/Ellipse ${comments[0]["img"]}.svg" alt="">
-              <p>${comments[0]["name"]}</p>
-          </div>
-          `;
-
-
-  commentsSection.innerHTML = starHTML;
-
-  const leftArr = document.querySelector(".leftArrow");
-  const rightArr = document.querySelector(".rightArrow");
-
-  rightArr.addEventListener("click", () => {
+const comments = [
+    {
+      stars: 3,
+      comment: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, nisl eget tristique
+            molestie. Quisque pharetra tincidunt interdum nunc, ac eget nisi, lectus interdum. Cras aliquet
+            curabitur in morbi facilisi imperdiet non sollicitudin.`,
+      img: 18,
+      name: "Designation",
+    },
+    {
+      stars: 4,
+      comment: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, nisl eget tristique
+            molestie. Quisque pharetra tincidunt interdum nunc, ac eget nisi, lectus interdum. Cras aliquet
+            curabitur in morbi facilisi imperdiet non sollicitudin. Molestie volutpat vulputate eu nunc in
+            vulputate sit. Varius neque accumsan libero, augue tortor.`,
+      img: 17,
+      name: "Production",
+    },
+    {
+      stars: 5,
+      comment: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi, nisl eget tristique
+            molestie. Quisque pharetra tincidunt interdum nunc, ac eget nisi, lectus interdum. Cras aliquet
+            curabitur in morbi facilisi imperdiet non sollicitudin. Molestie volutpat vulputate eu nunc in
+            vulputate sit. Varius neque accumsan libero, augue tortor. Id metus rutrum fringilla nibh neque, at
+            bibendum. Diam libero morbi aliquet mi gravida velit enim.`,
+      img: 16,
+      name: "Result",
+    },
+  ];
+  
+  const commentsSection = document.querySelector(".comments");
+  const commentContainer = document.querySelector(".commentContainer");
+  const commentStars = document.querySelector(".stars");
+  const commentContent = document.querySelector(".comment");
+  const commentImage = document.querySelector(".commentImage");
+  const commentName = document.querySelector(".commentName");
+  
+  function updateComment() {
+    const fullStars = comments[0]["stars"];
+    const emptyStars = 5 - fullStars;
+  
+    const fullStarsHtml = "<img src='./img/Star.svg'>".repeat(fullStars);
+    const emptyStarsHtml = "<img src='./img/starEmpty.png'>".repeat(emptyStars);
+  
+    commentStars.innerHTML = `
+      ${fullStarsHtml}
+      ${emptyStarsHtml}
+    `;
+  
+    commentContent.textContent = comments[0]["comment"];
+    commentImage.src = `./img/avatarai/Ellipse ${comments[0]["img"]}.svg`;
+    commentName.textContent = comments[0]["name"];
+  }
+  
+  function shiftCommentsRight() {
     const firstEl = comments.shift();
     comments.push(firstEl);
-    document.querySelector(".commentContainer").remove();
-    commentHtml();
-  });
-  leftArr.addEventListener("click", () => {
-    const last = comments.slice(-1);
-    comments.pop();
-    comments.unshift(last[0]);
-    document.querySelector(".commentContainer").remove();
-    commentHtml();
-  });
-}
-commentHtml();
+    updateComment();
+  }
+  
+  function shiftCommentsLeft() {
+    const last = comments.pop();
+    comments.unshift(last);
+    updateComment();
+  }
+  
+  const leftArr = document.querySelector(".leftArrow");
+  const rightArr = document.querySelector(".rightArrow");
+  
+  rightArr.addEventListener("click", shiftCommentsRight);
+  leftArr.addEventListener("click", shiftCommentsLeft);
+  
+  updateComment();
 
-//   const plans = [
-//     {
-//       cardName: "Basic",
-//       cardPrice: 5000,
-//       li: ["Create BoQ", "Release Purchase Orders", "Cash flow analysis"],
-//     },
-//     {
-//       cardName: "Essential",
-//       cardPrice: 8000,
-//       li: [
-//         "Create BoQ",
-//         "Release Purchase Orders",
-//         "Cash flow analysis",
-//         "Vendor App",
-//         "Site Engineer App",
-//         "Client App",
-//       ],
-//     },
-//     {
-//       cardName: "Enterprise",
-//       cardPrice: "Contact sales team",
-//       message:
-//         "Unlock the full power to work effectively. Click “Request Demo” now.",
-//     },
-//   ];
 
-//   const slider = document.querySelector(".slider");
 
-//   function plansHtml() {
-//     let cards = "";
+const basicMonth = document.getElementById('basicMonth');
+const essentialMonth = document.getElementById('essentialMonth');
+const checkBtn = document.getElementById('check');
 
-//     const plansContainer = document.querySelector(".cards");
-//     plans.forEach((el) => {
-//       let price;
-//       if (
-//         !slider.classList.contains("monthly") &&
-//         typeof el["cardPrice"] == "number"
-//       ) {
-//         price = el["cardPrice"] * 12 * 0.9;
-//       } else {
-//         price = el["cardPrice"];
-//       }
-//       let liItems = [];
+checkBtn.addEventListener('click', function(){
+    if(checkBtn.checked){
+        basicMonth.innerHTML=`Rs. 500`;
+        essentialMonth.innerHTML=`Rs. 600`;
+    }else{
+        basicMonth.innerHTML=`Rs. 50000`;
+        essentialMonth.innerHTML=`Rs. 605000`;
+    }
+})
 
-//       if (el["li"]) {
-//         el["li"].forEach((li) => {
-//           liItems += `<li><img src="./img/Vector.png" alt="">${li}</li>`;
-//         });
-//       }
 
-//       let html = `
-//           <div class="card">
-//           <p class="card-name">${el["cardName"]}</p>
-//           <h2 class="card-price">${price}</h2>
-//           <a class="start-request-demo-button" href="">Request Demo</a>
-//           `;
-//       if (el["li"]) {
-//         html += `
-//           <ul>
-//           ${liItems}
-//         </ul>
-//         </div>`;
-//       } else {
-//         html += `
-//           <p class="start-pros">${el["message"]}</p>
-//           </div>`;
-//       }
-//       cards += html;
-//     });
-//     plansContainer.innerHTML = cards;
-//   }
 
-//   plansHtml();
 
-//   slider.addEventListener("click", () => {
-//     if (slider.classList.contains("monthly")) {
-//       slider.classList.remove("monthly");
-//     } else {
-//       slider.classList.add("monthly");
-//     }
-//     plansHtml();
-//   });
+
+
+
+
+
+
+
+
 
 // How does Collab-app help section
 
