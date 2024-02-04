@@ -1,8 +1,13 @@
+*, html {
+
+  scroll-behavior: smooth !important;
+}
 body * {
   margin: 0;
   padding: 0;
   vertical-align: top;
   box-sizing: border-box;
+
 }
 
 body {
@@ -766,6 +771,7 @@ table{
   padding: 0;
 
 }
+
 td{
   color: rgb(96, 38, 127);
   padding-bottom: 30px;
@@ -782,7 +788,6 @@ th{
 }
 .table-div a{
   color: rgb(96, 38, 127);
-  margin-left: 40px;
   text-decoration: none;
 }
 

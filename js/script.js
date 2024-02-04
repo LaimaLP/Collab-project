@@ -103,10 +103,13 @@ const helpBtn2 = document.getElementById('helpBtn2');
 
 
 helpBtn.addEventListener('click', function(){
-   
+    
+   helpBtn.classList.add('active');
+   helpBtn2.classList.remove('active');
+
         firstComment.innerHTML=`<b>Work/Material request:</b> Whenever a client wants to
         start, a work request notifications with date
-        and time for materials and artisians will be promted through their app.</p>`;
+        and time for materials and artisians will be promted through their app.`;
         secondComment.innerHTML=` <b>Project Management:</b> Work on multiple projects <a
         href="#"><b>...see
             more </b></a>`;
@@ -120,6 +123,10 @@ helpBtn.addEventListener('click', function(){
 })
 
 helpBtn2.addEventListener('click', function(){
+   helpBtn2.classList.add('active');
+   helpBtn.classList.remove('active');
+
+
    
     fourthComment.innerHTML=`<b>Work/Material request:</b> Whenever a client wants to
     start, a work request notifications with date
