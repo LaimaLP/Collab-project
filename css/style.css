@@ -51,7 +51,6 @@ nav {
   display: flex;
   gap: 20px;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .menu-link a {
@@ -59,7 +58,6 @@ nav {
   text-decoration: none;
   color: black;
   border-radius: 5px;
-  /* padding: 5px; */
 }
 
 .menu-link a:last-child {
@@ -81,7 +79,6 @@ main {
   width: 100%;
   display: block;
   text-align: center;
-  /* background-color: aliceblue; */
 }
 
 .main-text {
@@ -195,7 +192,6 @@ main {
   line-height: 25px;
 }
 .app-content {
-  /* background-color: aqua; */
   margin-right: 10%;
   margin-left: 10%;
   display: flex;
@@ -204,15 +200,11 @@ main {
 }
 .info-side {
   width: 60%;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
 }
 .app-content .info-side .buttons-container {
   display: flex;
   justify-content: center;
   gap: 1px;
-  /* background-color: antiquewhite; */
   padding: 5px 0;
   box-shadow: 0px 3px 10px rgb(153, 146, 146);
   border-radius: 5px;
@@ -255,13 +247,11 @@ main {
 }
 
 .list-container {
-  /* background-color: #9A54BC; */
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 5px;
   align-items: center;
-  /* justify-content: center;  */
 }
 
 .list-item {
@@ -279,9 +269,6 @@ main {
   font-size: 15px;
 }
 .img-container {
-  /* width: 300px; */
-  /* background-color: brown; */
-  /* aspect-ratio: 200/432; */
   width: 40%;
 }
 .img-container > img {
@@ -291,7 +278,6 @@ main {
 .video-section {
   margin-top: 80px;
   margin-bottom: 80px;
-  /* background-color: antiquewhite; */
 }
 .video-section h2 {
   margin-bottom: 30px;
@@ -412,7 +398,6 @@ input{
   gap: 30px;
   justify-content: center;
   text-align: left;
-  /* background-color: aquamarine; */
 }
 .package-item {
   padding: 30px;
@@ -443,42 +428,11 @@ input{
   margin-bottom: 10px;
 }
 
-
-/* .comments {
-  text-align: center;
-  background-color: rgba(226, 189, 242, 0.232);
-  padding: 50px 0;
-}
-
-.comment{
-  width: 600px;
-  height: 80px;
-}
-.comment-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-  height: 200px;
-
-}
-
-.leftArrow, .rightArrow {
-  cursor: pointer;
-}
-
-.comments p {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-} */
-
-
-
 .comments {
   text-align: center;
   background-color: rgba(226, 189, 242, 0.232);
   padding: 50px 0;
-  overflow: hidden; /* Hide overflowing content for smooth transition */
+  overflow: hidden; 
 }
 
 .comment-container {
@@ -487,16 +441,13 @@ input{
   align-items: center;
   gap: 4rem;
   height: 200px;
-  transition: transform 0.5s ease; /* Add smooth transition for the transform property */
+  transition: transform 0.5s ease; 
 }
 
 .comment {
   width: 600px;
   height: 80px;
 }
-
-
-
 
 .leftArrow, .rightArrow {
   cursor: pointer;
@@ -506,29 +457,6 @@ input{
   margin-top: 0.5rem;
   font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .star-section {
   background-color: rgba(226, 189, 242, 0.11);
@@ -573,7 +501,6 @@ h2 {
 .road-map-avatar-conteiner {
  margin: 0 200px;
   position: relative;
-  /* background-color: aqua; */
   height: 400px;
   background-image: url(../img/avatarai/Vector1.svg);
   background-repeat: no-repeat;
@@ -589,13 +516,7 @@ h2 {
   top: 26%;
  
 }
-/* .arrow-map{
-  width: 900px;
-  max-width: 900px;
-  min-width: 900px;
-  position: relative;
 
-} */
 .avatar-map {
   width: 80px;
   
@@ -696,6 +617,7 @@ height: 85px;
   display: flex;
   align-items: center;
   background-color: rgba(226, 189, 242, 0.11);
+  padding-bottom: 150px;
 }
 .question-contact-conteiner{
   width: 35%;
@@ -720,9 +642,8 @@ height: 85px;
  width: 45%;
 }
 .ending-section{
-  margin-top: 100px;
-/* background-color: aqua; */
-}
+  background-color: rgba(226, 189, 242, 0.11);
+  }
 .ending-section>h2{
   color: rgba(154, 84, 188, 1);
   text-align: left;
@@ -735,13 +656,11 @@ height: 85px;
 .contacts-table-conteiner{
   display: flex;
   justify-content: space-between;
-  background-color: rgba(226, 189, 242, 0.11);
   padding-bottom: 50px;
   
 
 }
 .social-contacts-div{
-  /* background-color: aquamarine; */
   width: 30%;
   margin-left: 100px;
   text-align: left;
@@ -779,7 +698,6 @@ td{
 
 }
 th{
-  /* text-align: left; */
   padding: 0 100px 30px 0;
 }
 .table-div p{

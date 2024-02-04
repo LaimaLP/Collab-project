@@ -1,4 +1,22 @@
-console.log("labas");
+
+
+const basicMonth = document.getElementById('basicMonth');
+const essentialMonth = document.getElementById('essentialMonth');
+const checkBtn = document.getElementById('check');
+
+checkBtn.addEventListener('click', function(){
+    if(checkBtn.checked){
+        basicMonth.innerHTML=`Rs. 500`;
+        essentialMonth.innerHTML=`Rs. 600`;
+    }else{
+        basicMonth.innerHTML=`Rs. 50000`;
+        essentialMonth.innerHTML=`Rs. 605000`;
+    }
+})
+
+
+// Comments section
+
 
 const comments = [
     {
@@ -7,7 +25,7 @@ const comments = [
             molestie. Quisque pharetra tincidunt interdum nunc, ac eget nisi, lectus interdum. Cras aliquet
             curabitur in morbi facilisi imperdiet non sollicitudin.`,
       img: 18,
-      name: "Designation",
+      name: "Anna",
     },
     {
       stars: 4,
@@ -15,7 +33,7 @@ const comments = [
             molestie. Quisque pharetra tincidunt interdum nunc, ac eget nisi, lectus interdum. Cras aliquet
             vulputate sit. Varius neque accumsan libero, augue tortor.`,
       img: 17,
-      name: "Production",
+      name: "Ruth",
     },
     {
       stars: 5,
@@ -23,7 +41,7 @@ const comments = [
             molestie. Quisque pharetra tincidunt interdum nunc, ac eget nisi, lectus interdum. Cras aliquet
             bibendum. Diam libero morbi aliquet mi gravida velit enim.`,
       img: 16,
-      name: "Result",
+      name: "John",
     },
   ];
   
@@ -71,25 +89,6 @@ const comments = [
   rightArr.addEventListener("click", shiftCommentsRight);
   leftArr.addEventListener("click", shiftCommentsLeft);
   
-
-
-
-const basicMonth = document.getElementById('basicMonth');
-const essentialMonth = document.getElementById('essentialMonth');
-const checkBtn = document.getElementById('check');
-
-checkBtn.addEventListener('click', function(){
-    if(checkBtn.checked){
-        basicMonth.innerHTML=`Rs. 500`;
-        essentialMonth.innerHTML=`Rs. 600`;
-    }else{
-        basicMonth.innerHTML=`Rs. 50000`;
-        essentialMonth.innerHTML=`Rs. 605000`;
-    }
-})
-
-
-
 // How does Collab-app help section
 
 
